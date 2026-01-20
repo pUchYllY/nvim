@@ -6,11 +6,11 @@ wm.write=function()
 		function(input)
 			if input == "" then -- Enter → close all files
 				vim.cmd("w")
-				vim.cmd("echo "..vim.fn.expand("%:t").." written.")
+				print(vim.fn.expand("%:t").." written.")
 
 			elseif input==nil then
 				-- CTRL+C or ESC → messaggio 
-				vim.notify("echo "..vim.fn.expand("%:t").." not written.")
+				print(vim.fn.expand("%:t").." not written.")
 			end
 		end
 	)
@@ -23,10 +23,10 @@ wm.write_all=function()
 		function(input)
 			if input == "" then -- Enter → close all files
 				vim.cmd("wa")
-				vim.notify("All opened files written.")
+				print("All opened files written.")
 			elseif input==nil then
 				-- CTRL+C or ESC → messaggio 
-				vim.notify("All opened files not written.")
+				print("All opened files not written.")
 			end
 		end
 	)
@@ -38,10 +38,10 @@ wm.write_and_quit=function()
 		function(input)
 			if input == "" then -- Enter → save and close itself
 				vim.cmd("wq")
-				vim.notify(vim.fn.expand("%:t").." written and closed.")
+				print(vim.fn.expand("%:t").." written and closed.")
 			else
 				-- Every response → file will not get saved and it will not close itself
-				vim.notify(vim.fn.expand("%:t").." not written and closed.")
+				print(vim.fn.expand("%:t").." not written and closed.")
 			end
 		end
 	)
@@ -55,7 +55,7 @@ wm.write_and_quit_all=function()
 				vim.cmd("wqa")
 			else
 				-- Every response → file will not get saved and it will not close itself
-				vim.notify("All opened files not written and closed.")
+				print("All opened files not written and closed.")
 			end
 		end
 	)
@@ -68,11 +68,11 @@ wm.quit=function()
 		function(input)
 			if input == "" then -- Enter → close all files
 				vim.cmd("q")
-				vim.notify("File closed.")
+				print(vim.fn.expand("%:t").." closed.")
 			elseif input==nil then
 				--
 				-- CTRL+C or ESC → messaggio 
-				vim.notify("File not closed.")
+				print(vim.fn.expand("%:t").." closed.")
 			end
 		end
 	)
@@ -88,7 +88,7 @@ wm.quit_all=function()
 			elseif input==nil then
 				--
 				-- CTRL+C or ESC → messaggio 
-				vim.notify("All opened files not closed.")
+				print("All opened files not closed.")
 			end
 		end
 	)
@@ -104,7 +104,7 @@ wm.quit_all_without_saving=function()
 			elseif input==nil then
 				--
 				-- CTRL+C or ESC → messaggio 
-				vim.notify("All opened files not written and closed.")
+				print("All opened files not written and closed.")
 			end
 		end
 	)
