@@ -6,11 +6,11 @@ wm.write=function()
 		function(input)
 			if input == "" then -- Enter → close all files
 				vim.cmd("w")
-				vim.notify(vim.fn.expand("%:t").." written.")
+				vim.cmd("echo "..vim.fn.expand("%:t").." written.")
 
 			elseif input==nil then
 				-- CTRL+C or ESC → messaggio 
-				vim.notify(vim.fn.expand("%:t").." not written.")
+				vim.notify("echo "..vim.fn.expand("%:t").." not written.")
 			end
 		end
 	)
