@@ -107,5 +107,10 @@ vim.keymap.set("n", "<leader>wqa", function() w.write_and_quit_all() end, { desc
 -- This keymap applies new configuration's modifies
 --vim.keymap.set("n", "<leader>%", function() w.source_this_file() end, { desc = "Source this File (Neovim command)" })
 
+-- This keymap gives you the same behavior ENTER button during the insert mode
+-- vim.keymap.set("i","<C-j>","<CR>",{desc="Insert Newline Character"})
+
+
+
 --]
 return k
