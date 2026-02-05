@@ -47,7 +47,7 @@ vim.api.nvim_create_autocmd("FileType", {
     -- Il pattern 'mmd' fa scattare questo comando solo per i file .lua
     pattern={"*.java","*.json"},
     callback = function()
-        vim.bo.filetype="python" -- forza l'identazione visiva e digitale del tab sui file mermaid
+        vim.bo.filetype="java" -- forza l'identazione visiva e digitale del tab sui file mermaid
         -- **vim.opt_local** assicura che l'impostazione sia solo per il buffer aperto
         vim.opt_local.tabstop = 4
         vim.opt_local.shiftwidth = 4
