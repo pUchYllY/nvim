@@ -17,7 +17,7 @@ vim.api.nvim_create_autocmd("FileType", {
 -- Sovrascrittura per l'estensione 'Mermaid'
 vim.api.nvim_create_autocmd({"BufRead","BufNewFile"}, {
     -- Il pattern 'mmd' fa scattare questo comando solo per i file .lua
-    pattern="*.mmd",
+    pattern={"*.mmd"},
     callback = function()
         vim.bo.filetype="mermaid" -- forza l'identazione visiva e digitale del tab sui file mermaid
         -- **vim.opt_local** assicura che l'impostazione sia solo per il buffer aperto
@@ -34,7 +34,7 @@ vim.api.nvim_create_autocmd({"BufRead","BufNewFile"}, {
 -- Sovrascrittura per l'estensione 'Python'
 vim.api.nvim_create_autocmd({"BufRead","BufNewFile"}, {
     -- Il pattern 'mmd' fa scattare questo comando solo per i file .lua
-    pattern="*.py",
+    pattern={"*.py"},
     callback = function()
         vim.bo.filetype="python" -- forza l'identazione visiva e digitale del tab sui file mermaid
         -- **vim.opt_local** assicura che l'impostazione sia solo per il buffer aperto
@@ -51,7 +51,7 @@ vim.api.nvim_create_autocmd({"BufRead","BufNewFile"}, {
 -- Sovrascrittura per l'estensione 'Java'
 vim.api.nvim_create_autocmd("FileType", {
     -- Il pattern 'mmd' fa scattare questo comando solo per i file .lua
-    pattern={"*.java","*.json"},
+	pattern={"*.java"},
     callback = function()
         vim.bo.filetype="java" -- forza l'identazione visiva e digitale del tab sui file mermaid
         -- **vim.opt_local** assicura che l'impostazione sia solo per il buffer aperto
