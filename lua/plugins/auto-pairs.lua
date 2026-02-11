@@ -33,8 +33,8 @@
 
 			npairs.add_rules({
 				Rule("~","~","mermaid")
-			:with_pair(function() return true end)
-		})
+					:with_pair(function() return true end)
+			})
 	end,
 
 
