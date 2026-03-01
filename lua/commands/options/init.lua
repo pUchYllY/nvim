@@ -12,7 +12,7 @@ vim.o.numberwidth = 4 -- imposta il numero di colonne per la colonna 1
 vim.o.cursorline = true
 vim.o.number = true
 
-local filetype=require("commands.options.filetype")
+--local filetype=require("commands.options.filetype")
 
 --
 
