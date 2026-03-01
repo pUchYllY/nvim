@@ -1,30 +1,33 @@
 local plugins={}
 
-require("plugins.colorscheme")
-require("plugins.telescope")
-require("plugins.treesitter")
-require("plugins.neotree")
-require("plugins.lualine")
-require("plugins.lsp-config")
-require("plugins.telescope-ui")
-require("plugins.none-ls")
+--require("plugins.ai") -- da tenerlo momentaneamente disattivato
 require("plugins.alpha")
---require("plugins.completions")
-require("plugins.debugging")
-require("plugins.ai")
-require("plugins.auto-indent")
-require("plugins.auto-pairs")
-require("plugins.avante")
+--require("plugins.auto-indent") -- da vedere meglio nel repo remoto
+--require("plugins.avante") -- da capire meglio cosa sia e cosa faccia
 require("plugins.blink")
-require("plugins.formatting")
-require("plugins.file-manager")
+require("plugins.colorscheme")
+--require("plugins.completions") -- da tenerlo disattivato
+--require("plugins.debugging") -- da modificare
+--require("plugins.formatting") -- da modificare
+--require("plugins.file-manager") -- da tenerlo decommentato
 require("plugins.gitsigns")
 require("plugins.icons")
-require("plugins.mini_ai")
+require("plugins.lsp-config")
+require("plugins.lualine")
+--require("plugins.mini_ai") -- da vedere meglio nel repo remoto GitHub
+require("plugins.neotree")
+--require("plugins.none-ls") -- da confrontare con debugging.lua
 require("plugins.show-keys")
+require("plugins.telescope")
+require("plugins.telescope-ui")
+require("plugins.treesitter")
 require("plugins.which-keys")
 
 return plugins
+
+
+--require("plugins.auto-pairs") -- da cancellare
+
 
 --[[
     {
