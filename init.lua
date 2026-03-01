@@ -5,3 +5,4 @@ require("commands.options")
 require("commands.keymaps")
 
 require("config.lazy")
+require("filetype")
