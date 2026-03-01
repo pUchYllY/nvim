@@ -1,4 +1,5 @@
 local k = {}
+
 -- [[
 -- Make sure to setup `mapleader` and `maplocalleader` before
 -- loading lazy.nvim so that mappings are correct.
@@ -108,9 +109,36 @@ vim.keymap.set("n", "<leader>wqa", function() w.write_and_quit_all() end, { desc
 --vim.keymap.set("n", "<leader>%", function() w.source_this_file() end, { desc = "Source this File (Neovim command)" })
 
 -- This keymap gives you the same behavior ENTER button during the insert mode
-vim.keymap.set("i","<C-j>","<CR>",{desc="Insert Newline Character"})
+--vim.keymap.set("i","<C-j>","<CR>",{desc="Insert Newline Character"})
 
 -- This keymap gives you to carriage return behavior pressing the ENTER button
-vim.keymap.set("i","<CR>","<CR>",{desc="Carriage Return"})
+--vim.keymap.set("i","<CR>","<CR>",{desc="Carriage Return"})
 --]
+
+-- This keymap inserts a pair of round brackets
+vim.keymap.set("i","(","()<Left>",{desc=""})
+
+-- This keymap inserts a pair of squared brackets
+vim.keymap.set("i","[","[]<Left>",{desc=""})
+
+-- This keymap inserts a pair of curly brackets
+vim.keymap.set("i","{","{}<Left>",{desc=""})
+
+-- This keymap inserts a pair of apex
+vim.keymap.set("i","'","''<Left>",{desc=""})
+
+-- This keymap inserts a pair of double apex
+vim.keymap.set("i",'"','""<Left>',{desc=""})
+
+-- This macro inserts a block of pair of round brackets
+vim.keymap.set("i","<A-(>","()<Left><NL><Tab><NL><Up><Right>",{desc=""})
+
+-- This macro inserts a block of pair of square brackets
+vim.keymap.set("i","<A-è>","[]<Left><NL><Tab><NL><Up><Right>",{desc=""})
+
+-- This macro inserts a block of pair of curly brackets
+vim.keymap.set("i","<A-0>","{}<Left><NL><Tab><NL><Up><Right>",{desc=""})
+
+
+
 return k
