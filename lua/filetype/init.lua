@@ -14,6 +14,11 @@ vim.api.nvim_create_autocmd("FileType", {
 				vim.opt_local.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 			end
 		)
+
+		--local function_block=require("commands.keymap.function")
+
+		-- This macro inserts a block of function
+		vim.keymap.set("i","<c-f>",function() require("commands.keymaps.function_block").lua_function_block() end,{desc=""})
     end,
     desc = "Forza indentazione a 4 spazi per Lua",
 })
@@ -56,6 +61,12 @@ vim.api.nvim_create_autocmd({"BufRead","BufNewFile"}, {
 				vim.opt_local.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 			end
 		)
+
+		-- This macro inserts a block of function with a return
+		vim.keymap.set("i","<c-f>",function() require("commands.keymaps.function_block").pythonReturn_function_block() end,{desc=""})
+
+		-- This macro inserts a block of process function
+		vim.keymap.set("i","<c-F>",function() require("commands.keymaps.function_block").pythonPass_function_block() end,{desc=""})
     end,
     desc = "Forza indentazione a 4 spazi per Python",
 })
@@ -77,6 +88,12 @@ vim.api.nvim_create_autocmd("FileType", {
 				vim.opt_local.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 			end
 		)
+
+		-- This macro inserts a block of function with a return
+		vim.keymap.set("i","<c-f>",function() require("commands.keymaps.function_block").c_cppJavaReturn_function_block() end,{desc=""})
+
+		-- This macro inserts a block of process function
+		vim.keymap.set("i","<c-F>",function() require("commands.keymaps.function_block").c_cppJavaVoid_function_block() end,{desc=""})
     end,
     desc = "Forza indentazione a 4 spazi per Python",
 })
