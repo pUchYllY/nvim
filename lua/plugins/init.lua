@@ -1,30 +1,24 @@
 local plugins={}
 
-require("plugins.colorscheme")
-require("plugins.telescope")
-require("plugins.treesitter")
-require("plugins.neotree")
-require("plugins.lualine")
-require("plugins.lsp-config")
-require("plugins.telescope-ui")
-require("plugins.none-ls")
 require("plugins.alpha")
---require("plugins.completions")
-require("plugins.debugging")
-require("plugins.ai")
-require("plugins.auto-indent")
-require("plugins.auto-pairs")
-require("plugins.avante")
 require("plugins.blink")
-require("plugins.formatting")
-require("plugins.file-manager")
+require("plugins.colorscheme")
 require("plugins.gitsigns")
 require("plugins.icons")
-require("plugins.mini_ai")
+require("plugins.lsp-config")
+require("plugins.lualine")
+require("plugins.neotree")
 require("plugins.show-keys")
+require("plugins.telescope")
+require("plugins.telescope-ui")
+require("plugins.treesitter")
 require("plugins.which-keys")
 
 return plugins
+
+
+--require("plugins.auto-pairs") -- da cancellare
+
 
 --[[
     {

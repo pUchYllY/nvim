@@ -41,3 +41,6 @@ luac.out
 
 # Lazy-lock
 lazy-lock.json
+
+# plugins-issues
+*.plugins-issues
