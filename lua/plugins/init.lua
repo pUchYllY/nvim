@@ -1,22 +1,13 @@
 local plugins={}
 
---require("plugins.ai") -- da tenerlo momentaneamente disattivato
 require("plugins.alpha")
---require("plugins.auto-indent") -- da vedere meglio nel repo remoto
---require("plugins.avante") -- da capire meglio cosa sia e cosa faccia
 require("plugins.blink")
 require("plugins.colorscheme")
---require("plugins.completions") -- da tenerlo disattivato
---require("plugins.debugging") -- da modificare
---require("plugins.formatting") -- da modificare
---require("plugins.file-manager") -- da tenerlo decommentato
 require("plugins.gitsigns")
 require("plugins.icons")
 require("plugins.lsp-config")
 require("plugins.lualine")
---require("plugins.mini_ai") -- da vedere meglio nel repo remoto GitHub
 require("plugins.neotree")
---require("plugins.none-ls") -- da confrontare con debugging.lua
 require("plugins.show-keys")
 require("plugins.telescope")
 require("plugins.telescope-ui")
