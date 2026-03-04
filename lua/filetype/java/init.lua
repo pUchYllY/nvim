@@ -17,10 +17,13 @@ vim.api.nvim_create_autocmd("FileType", {
 		)
 
 		-- This macro inserts a block of function with a return
-		vim.keymap.set("i","<c-f>",function() require("commands.keymaps.function_block").c_cppJavaReturn_function_block() end,{expr=true,desc=""})
+		vim.keymap.set("i","<c-r>",function() require("commands.keymaps.function_block").c_cppJavaReturn_function_block() end,{expr=true,desc=""})
 
 		-- This macro inserts a block of process function
-		vim.keymap.set("i","<c-F>",function() require("commands.keymaps.function_block").c_cppJavaVoid_function_block() end,{expr=true,desc=""})
+		vim.keymap.set("i","<c-f>",function() require("commands.keymaps.function_block").c_cppJavaVoid_function_block() end,{expr=true,desc=""})
+
+		-- This macro inserts a block of instance return function
+		vim.keymap.set("i","<c-l>",function() require("commands.keymaps.function_block").cppJavaClassReturn_function_block() end,{expr=true,desc=""})
 	end,
 	desc = "Forza indentazione a 4 spazi per Python",
 })
